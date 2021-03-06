@@ -1,0 +1,98 @@
+git init
+git status
+git show
+
+git config --global user.name "user name"
+git config --global user.email "user email
+touch .gitignore
+
+
+untracked files
+
+
+Add files to staging area
+
+git add -A			to add everything to staging area
+git add file_name
+
+file will go to statging area under the title  changes to be committed:
+
+to check to status of files
+git status
+
+remove files from staging area
+------------------------------------------------------------------------------
+git reset 			to remove all files from staging area
+git reset file_name		to remove a particular file from staging area
+------------------------------------------------------------------------------
+
+
+our first commit
+------------------------------------------------------------------------------
+git add -A			add everything to staging area
+git commit -m "Initial Commit"	commit to local repository 
+git status
+git log
+------------------------------------------------------------------------------
+
+
+cloning a remote repository
+------------------------------------------------------------------------------
+$ git clone <url> <where to clone>
+	or
+$ git clone ../remote_repo.git .
+
+
+viewing information about the remote repository
+------------------------------------------------------------------------------
+$ git remote -v			list location of the repository
+$ git branch -a			list all the branches of the repository
+
+
+pushing changes 
+------------------------------------------------------------------------------
+$ git diff
+$ git status
+$ git add -A
+$ git commit -m "Multiply function"
+
+
+THEN PUSH
+------------------------------------------------------------------------------
+$ git pull origin master
+$ git push origin master
+
+
+create a branch for desired feature
+------------------------------------------------------------------------------
+git branch <branch name>	to create a new branch
+git branch			to list branches
+git checkout <branch_name>	to start working on a branch
+
+
+after commit push branch to remote
+------------------------------------------------------------------------------
+git push -u origin <branch name>		to push the branch to remote reposiory (usage of -u)
+git branch -a					to list all branches
+
+git pull
+git push
+
+
+
+Merge a branch
+-----------------------------------------------------------------------------
+git checkout master
+git pull origin master
+git branch --merged				tell us the branches we have merged so far
+git merge <branch name>
+git push origin master
+
+
+
+Deleting a branch
+----------------------------------------------------------------------------
+git branch --merged
+git branch -d <branch name>			to delete a branch from local repository
+git branch -a					to show all branches local or remote
+git push origin --delete <branch name>		to delete branch from remote repository
