@@ -97,3 +97,17 @@ git branch --merged
 git branch -d <branch name>			to delete a branch from local repository
 git branch -a					to show all branches local or remote
 git push origin --delete <branch name>		to delete branch from remote repository
+
+
+linking local repository to remote repository
+----------------------------------------------------------------------------------------
+git remote add origin <url of remote repo>
+git remote -v					to verify repository is linked or not
+----------------------------------------------------------------------------------------
+
+
+pushing the local repository to remote repository
+--------------------------------------------------------------------------------------
+git push origin master  			master shows master branch
+
+after above command we will be asked for credentials
