@@ -1,25 +1,72 @@
+CHECK VERSION
+-----------------------------------------------------------------
+git --version
+-----------------------------------------------------------------
+
+
+SET CONFIG VALUES
+-----------------------------------------------------------------
+git config --global user.name "user name"
+git config --global user.email "user email"
+git config --list
+-----------------------------------------------------------------
+
+
+to find help for a command
+-----------------------------------------------------------------
+git help config
+-----------------------------------------------------------------
+
+
 git init
 git status
 git show
 git ls-files
 
-git config --global user.name "user name"
-git config --global user.email "user email
+
+stop git tracking our project
+-----------------------------------------------------------------
+rm -rf .git
+-----------------------------------------------------------------
+
+
+to create new file
+----------------------------------------------------------------
 touch .gitignore
+---------------------------------------------------------------
 
-
-untracked files
+untracked  and modified files will be in our working directory
+staging area is where we organize what we want to commit
+stage individual file and commit small chunks
+we commit when we have made an important change in our file
 
 
 Add files to staging area
-
+--------------------------------------------------------------------
 git add -A			to add everything to staging area
-git add file_name
+git add file_name		to add a particular file
+git status
+-------------------------------------------------------------------
+file will go to statging area under the title ......changes to be committed:
 
-file will go to statging area under the title  changes to be committed:
+
+changes to be committed:
+
+
+----------------------------------------------------------------------------
+
+
+
+untracked files:
+--------------------------------------------------------------------------------
+here we have those files that have been staged
+------------------------------------------------------------------------------
+
 
 to check to status of files
+---------------------------------------------------------------------------
 git status
+
 
 remove files from staging area
 ------------------------------------------------------------------------------
@@ -30,8 +77,8 @@ git reset file_name		to remove a particular file from staging area
 
 our first commit
 ------------------------------------------------------------------------------
-git add -A			add everything to staging area
-git commit -m "Initial Commit"	commit to local repository 
+git add -A				add everything to staging area
+git commit -m "Initial Commit"		commit to local repository 
 git status
 git log
 ------------------------------------------------------------------------------
@@ -41,7 +88,7 @@ cloning a remote repository
 ------------------------------------------------------------------------------
 $ git clone <url> <where to clone>
 	or
-$ git clone ../remote_repo.git .
+$ git clone ../remote_repo.git .		here . represents current repository
 
 
 viewing information about the remote repository
@@ -52,23 +99,40 @@ $ git branch -a			list all the branches of the repository
 
 pushing changes 
 ------------------------------------------------------------------------------
-$ git diff
-$ git status
-$ git add -A
-$ git commit -m "Multiply function"
+$ git diff			show the changes that we made in code using + and -
+$ git status			message :changes not staged for commit
+$ git add -A			message :changes to be committed
+$ git commit -m "modified Multiply function"
 
 
 THEN PUSH
 ------------------------------------------------------------------------------
-$ git pull origin master
+$ git pull origin master		
 $ git push origin master
 
+
+
+
+common workflow
 
 create a branch for desired feature
 ------------------------------------------------------------------------------
 git branch <branch name>	to create a new branch
 git branch			to list branches
 git checkout <branch_name>	to start working on a branch
+--
+------------------------------------------------------------------------
+this is the position when we work on the file to be sent to branch
+we work here on branch file
+--------------------------------------------------------------------------
+
+
+pushing a file in branch to staging area
+------------------------------------------------------------------------------
+git add -A
+
+git commit -m "what we did to a file in branch"
+
 
 
 after commit push branch to remote
@@ -78,6 +142,7 @@ git branch -a					to list all branches
 
 git pull
 git push
+--------------------------------------------------------------------------
 
 
 
